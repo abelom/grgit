@@ -46,28 +46,28 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.branch.current()</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.branch.current()</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.branch.list()
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.branch.list()
 grgit.branch.list(mode: &lt;mode&gt;, contains: &lt;commit&gt;)</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.branch.add(name: &lt;name&gt;, startPoint: &lt;startPoint&gt;, mode: &lt;mode&gt;)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.branch.add(name: &lt;name&gt;, startPoint: &lt;startPoint&gt;, mode: &lt;mode&gt;)</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.branch.change(name: &lt;name&gt;, startPoint: &lt;startPoint&gt;, mode: &lt;mode&gt;)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.branch.change(name: &lt;name&gt;, startPoint: &lt;startPoint&gt;, mode: &lt;mode&gt;)</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.branch.remove(names: [&lt;name&gt;, ...], force: &lt;boolean&gt;)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.branch.remove(names: [&lt;name&gt;, ...], force: &lt;boolean&gt;)</code></pre>
 </div>
 </div>
 </div>
@@ -194,7 +194,7 @@ grgit.branch.list(mode: &lt;mode&gt;, contains: &lt;commit&gt;)</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.branch.add(name: 'new-branch')</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.branch.add(name: 'new-branch')</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -202,7 +202,7 @@ grgit.branch.list(mode: &lt;mode&gt;, contains: &lt;commit&gt;)</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.branch.add(name: 'new-branch', startPoint: 'local-branch')
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.branch.add(name: 'new-branch', startPoint: 'local-branch')
 grgit.branch.add(name: 'new-branch', startPoint: 'local-branch', mode: BranchAddOp.Mode.NO_TRACK)</code></pre>
 </div>
 </div>
@@ -211,7 +211,7 @@ grgit.branch.add(name: 'new-branch', startPoint: 'local-branch', mode: BranchAdd
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.branch.add(name: 'new-branch', startPoint: 'local-branch', mode: BranchAddOp.Mode.TRACK)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.branch.add(name: 'new-branch', startPoint: 'local-branch', mode: BranchAddOp.Mode.TRACK)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -219,7 +219,7 @@ grgit.branch.add(name: 'new-branch', startPoint: 'local-branch', mode: BranchAdd
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.branch.add(name: 'new-branch', startPoint: 'origin/remote-branch')
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.branch.add(name: 'new-branch', startPoint: 'origin/remote-branch')
 grgit.branch.add(name: 'new-branch', startPoint: 'origin/remote-branch', mode: BranchAddOp.Mode.TRACK)</code></pre>
 </div>
 </div>
@@ -228,7 +228,7 @@ grgit.branch.add(name: 'new-branch', startPoint: 'origin/remote-branch', mode: B
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.branch.add(name: 'new-branch', startPoint: 'origin/remote-branch', mode: BranchAddOp.Mode.NO_TRACK)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.branch.add(name: 'new-branch', startPoint: 'origin/remote-branch', mode: BranchAddOp.Mode.NO_TRACK)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -236,7 +236,7 @@ grgit.branch.add(name: 'new-branch', startPoint: 'origin/remote-branch', mode: B
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.branch.change(name: 'existing-branch', startPoint: 'local-branch')
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.branch.change(name: 'existing-branch', startPoint: 'local-branch')
 grgit.branch.change(name: 'existing-branch', startPoint: 'local-branch', mode: BranchChangeOp.Mode.NO_TRACK)</code></pre>
 </div>
 </div>
@@ -245,7 +245,7 @@ grgit.branch.change(name: 'existing-branch', startPoint: 'local-branch', mode: B
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.branch.change(name: 'existing-branch', startPoint: 'local-branch', mode: BranchChangeOp.Mode.TRACK)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.branch.change(name: 'existing-branch', startPoint: 'local-branch', mode: BranchChangeOp.Mode.TRACK)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -253,7 +253,7 @@ grgit.branch.change(name: 'existing-branch', startPoint: 'local-branch', mode: B
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.branch.change(name: 'existing-branch', startPoint: 'origin/remote-branch')
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.branch.change(name: 'existing-branch', startPoint: 'origin/remote-branch')
 grgit.branch.change(name: 'existing-branch', startPoint: 'origin/remote-branch', mode: BranchChangeOp.Mode.TRACK)</code></pre>
 </div>
 </div>
@@ -262,7 +262,7 @@ grgit.branch.change(name: 'existing-branch', startPoint: 'origin/remote-branch',
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.branch.change(name: 'existing-branch', startPoint: 'origin/remote-branch', mode: BranchChangeOp.Mode.NO_TRACK)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.branch.change(name: 'existing-branch', startPoint: 'origin/remote-branch', mode: BranchChangeOp.Mode.NO_TRACK)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -270,7 +270,7 @@ grgit.branch.change(name: 'existing-branch', startPoint: 'origin/remote-branch',
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def removedBranches = grgit.branch.remove(names: ['the-branch'])
+<pre class="prettyprint highlight"><code data-lang="groovy">def removedBranches = grgit.branch.remove(names: ['the-branch'])
 def removedBranches = grgit.branch.remove(names: ['the-branch', 'other-branch'], force: false)</code></pre>
 </div>
 </div>
@@ -279,7 +279,7 @@ def removedBranches = grgit.branch.remove(names: ['the-branch', 'other-branch'],
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def removedBranches = grgit.branch.remove(names: ['the-branch'], force: true)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def removedBranches = grgit.branch.remove(names: ['the-branch'], force: true)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -287,7 +287,7 @@ def removedBranches = grgit.branch.remove(names: ['the-branch', 'other-branch'],
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def branches = grgit.branch.list()
+<pre class="prettyprint highlight"><code data-lang="groovy">def branches = grgit.branch.list()
 def branches = grgit.branch.list(mode: BranchListOp.Mode.LOCAL)</code></pre>
 </div>
 </div>
@@ -296,7 +296,7 @@ def branches = grgit.branch.list(mode: BranchListOp.Mode.LOCAL)</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def branches = grgit.branch.list(mode: BranchListOp.Mode.REMOTE)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def branches = grgit.branch.list(mode: BranchListOp.Mode.REMOTE)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -304,7 +304,7 @@ def branches = grgit.branch.list(mode: BranchListOp.Mode.LOCAL)</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def branches = grgit.branch.list(mode: BranchListOp.Mode.ALL)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def branches = grgit.branch.list(mode: BranchListOp.Mode.ALL)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -312,7 +312,7 @@ def branches = grgit.branch.list(mode: BranchListOp.Mode.LOCAL)</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def branches = grgit.branch.list(contains: %Commit hash or tag name%)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def branches = grgit.branch.list(contains: %Commit hash or tag name%)</code></pre>
 </div>
 </div>
 </div>

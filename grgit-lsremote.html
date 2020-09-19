@@ -46,17 +46,17 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.lsremote()</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.lsremote()</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.lsremote(heads: &lt;boolean&gt;, tags: &lt;boolean&gt;, remote: '&lt;name or uri&gt;')</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.lsremote(heads: &lt;boolean&gt;, tags: &lt;boolean&gt;, remote: '&lt;name or uri&gt;')</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.lsremote {
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.lsremote {
   heads = &lt;boolean&gt;
   tags = &lt;boolean&gt;
   remote = '&lt;name or uri&gt;'
@@ -100,7 +100,7 @@
 <div class="listingblock">
 <div class="title">Code</div>
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.lsremote(tags: true).each { ref, id -&gt;
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.lsremote(tags: true).each { ref, id -&gt;
   println "${id} ${ref.fullName}"
 }</code></pre>
 </div>

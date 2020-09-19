@@ -46,17 +46,17 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.clean()</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.clean()</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.clean(paths: ['&lt;path&gt;', ...], directories: &lt;boolean&gt;, dryRun: &lt;boolean&gt;, ignore: &lt;boolean&gt;)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.clean(paths: ['&lt;path&gt;', ...], directories: &lt;boolean&gt;, dryRun: &lt;boolean&gt;, ignore: &lt;boolean&gt;)</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.clean {
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.clean {
   paths = ['&lt;path&gt;', ...]
   directories = &lt;boolean&gt;
   dryRun = &lt;boolean&gt;
@@ -116,7 +116,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def cleanedPaths = grgit.clean()</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def cleanedPaths = grgit.clean()</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -124,7 +124,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def cleanedPaths = grgit.clean(directories: true)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def cleanedPaths = grgit.clean(directories: true)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -132,7 +132,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def cleanedPaths = grgit.clean(ignore: false)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def cleanedPaths = grgit.clean(ignore: false)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -140,7 +140,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def cleanedPaths = grgit.clean(dryRun: true)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def cleanedPaths = grgit.clean(dryRun: true)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -148,7 +148,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def cleanedPaths = grgit.clean(paths: ['specific/file.txt'])</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def cleanedPaths = grgit.clean(paths: ['specific/file.txt'])</code></pre>
 </div>
 </div>
 </div>

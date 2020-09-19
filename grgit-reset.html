@@ -46,13 +46,13 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.reset(commit: &lt;commit&gt;, paths: [&lt;path&gt;, ...])
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.reset(commit: &lt;commit&gt;, paths: [&lt;path&gt;, ...])
 grgit.reset(mode: &lt;mode&gt;, commit: &lt;commit&gt;)</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.reset {
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.reset {
   commit = &lt;commit&gt;
   paths = [&lt;path&gt;, ...]
 }
@@ -143,7 +143,7 @@ grgit.reset {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.reset(commit: 'HEAD~1', mode: 'soft')</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.reset(commit: 'HEAD~1', mode: 'soft')</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -151,7 +151,7 @@ grgit.reset {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.reset(commit: 'other-branch', mode: 'hard')</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.reset(commit: 'other-branch', mode: 'hard')</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -159,7 +159,7 @@ grgit.reset {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.reset(commit: 'HEAD~2')
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.reset(commit: 'HEAD~2')
 grgit.reset(commit: 'HEAD~2', mode: 'mixed')</code></pre>
 </div>
 </div>
@@ -168,7 +168,7 @@ grgit.reset(commit: 'HEAD~2', mode: 'mixed')</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.reset(paths: ['some/file.txt'])</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.reset(paths: ['some/file.txt'])</code></pre>
 </div>
 </div>
 </div>

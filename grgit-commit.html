@@ -46,13 +46,13 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.commit(message: &lt;message&gt;, paths: [&lt;path&gt;, ...], all: &lt;boolean&gt;, amend: &lt;boolean&gt;,
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.commit(message: &lt;message&gt;, paths: [&lt;path&gt;, ...], all: &lt;boolean&gt;, amend: &lt;boolean&gt;,
   reflogComment: &lt;message&gt;, committer: &lt;person&gt;, author: &lt;person&gt;)</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.commit {
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.commit {
   message = &lt;message&gt;
   paths = [&lt;path&gt;, ...]
   all = &lt;boolean&gt;
@@ -143,7 +143,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def commit = grgit.commit(message: 'something about the change')</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def commit = grgit.commit(message: 'something about the change')</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -151,7 +151,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def commit = grgit.commit(message: 'something about the change', all: true)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def commit = grgit.commit(message: 'something about the change', all: true)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -159,7 +159,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def commit = grgit.commit(message: 'something about the change', amend: true)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def commit = grgit.commit(message: 'something about the change', amend: true)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -167,7 +167,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def commit = grgit.commit(message: 'something about the change', author: new Person('Bruce Wayne', 'bruce.wayne@wayneindustries.com'))</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def commit = grgit.commit(message: 'something about the change', author: new Person('Bruce Wayne', 'bruce.wayne@wayneindustries.com'))</code></pre>
 </div>
 </div>
 </div>

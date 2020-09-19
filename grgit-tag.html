@@ -46,18 +46,18 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.tag.list()</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.tag.list()</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.tag.add(name: &lt;name&gt;, pointsTo: &lt;commit&gt;, force: &lt;boolean&gt;,
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.tag.add(name: &lt;name&gt;, pointsTo: &lt;commit&gt;, force: &lt;boolean&gt;,
   annotate: &lt;boolean&gt;, message: &lt;msg&gt;, tagger: &lt;person&gt;)</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.tag.remove(names: [&lt;name&gt;, ...])</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.tag.remove(names: [&lt;name&gt;, ...])</code></pre>
 </div>
 </div>
 </div>
@@ -138,7 +138,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def tags = grgit.tag.list()</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def tags = grgit.tag.list()</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -146,7 +146,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.tag.add(name: 'new-tag')
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.tag.add(name: 'new-tag')
 grgit.tag.add(name: 'new-tag', message: 'Some message')
 grgit.tag.add(name: 'new-tag', annotate: true)</code></pre>
 </div>
@@ -156,7 +156,7 @@ grgit.tag.add(name: 'new-tag', annotate: true)</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.tag.add(name: 'new-tag', annotate: false)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.tag.add(name: 'new-tag', annotate: false)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -164,7 +164,7 @@ grgit.tag.add(name: 'new-tag', annotate: true)</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.tag.add(name: 'new-tag', pointsTo: 'other-branch')</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.tag.add(name: 'new-tag', pointsTo: 'other-branch')</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -172,7 +172,7 @@ grgit.tag.add(name: 'new-tag', annotate: true)</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.tag.add(name: 'existing-tag', force: true)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.tag.add(name: 'existing-tag', force: true)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -180,7 +180,7 @@ grgit.tag.add(name: 'new-tag', annotate: true)</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def removedTags = grgit.tag.remove(names: ['the-tag'])</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">def removedTags = grgit.tag.remove(names: ['the-tag'])</code></pre>
 </div>
 </div>
 </div>

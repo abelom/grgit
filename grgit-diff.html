@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>grgit-status
+    <title>grgit-diff
     </title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css">
@@ -31,13 +31,13 @@
         <div class="container mdl-grid">
           <article class="mdl-card mdl-cell mdl-cell--12-col">
             <header class="mdl-card__title">
-              <h1 class="mdl-card__title-text">grgit-status</h1>
+              <h1 class="mdl-card__title-text">grgit-diff</h1>
             </header>
             <section class="mdl-card__supporting-text"><div class="sect1">
 <h2 id="_name">Name</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>grgit-status - Show the working tree status</p>
+<p>grgit-diff - Show changed files between commits</p>
 </div>
 </div>
 </div>
@@ -46,7 +46,21 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code data-lang="groovy">grgit.status()</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.diff()</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.diff(oldCommit: &lt;revstr&gt;, newCommit: &lt;revstr&gt;, pathFilter: &lt;pathFilterStr&gt;)</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.diff {
+  oldCcommit = &lt;revstr&gt;
+  newCommit = &lt;revstr&gt;
+  pathFilter = &lt;pathFilterStr&gt;
+}</code></pre>
 </div>
 </div>
 </div>
@@ -55,25 +69,69 @@
 <h2 id="_description">Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Displays paths that have differences between the index file and the current <code>HEAD</code> commit, paths that have differences between the working tree and the index file, and paths in the working tree that are not tracked by Git (and are not ignored by gitignore). The first are what you would commit by running <code>commit</code>; the second and third are what you could commit by running <code>add</code> before running <code>commit</code>.</p>
+<p>Show changed files between commits.</p>
 </div>
 <div class="paragraph">
-<p>Returns a <a href="http://ajoberstar.org/grgit/docs/grgit-core/groovydoc/org/ajoberstar/grgit/Status.html">Status</a> instance detailing the paths that differ.</p>
+<p>Returns a <code>List&lt;DiffEntry&gt;</code> <a href="http://ajoberstar.org/grgit/docs/grgit-core/groovydoc/org/ajoberstar/grgit/DiffEntry.html">DiffEntry</a> that matches pathFilter or all.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_options">Options</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><em>None</em></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">oldCommit</dt>
+<dd>
+<p>(<code>Object</code>, default: <code>HEAD</code>) A revstring-ish object naming the commit. For a more complete list of ways to specify a revstring, see <a href="grgit-resolve.html">grgit-resolve</a> (specifically the <code>toRevisionString</code> method).</p>
+</dd>
+<dt class="hdlist1">newCommit</dt>
+<dd>
+<p>(<code>Object</code>, default: <code>HEAD</code>) A revstring-ish object naming the commit. For a more complete list of ways to specify a revstring, see <a href="grgit-resolve.html">grgit-resolve</a> (specifically the <code>toRevisionString</code> method).</p>
+</dd>
+<dt class="hdlist1">pathFilter</dt>
+<dd>
+<p>(<code>String</code>, default: <code>null</code>) Limit the output to only files matching pathFilter. If omitted all files are returned.</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_examples">Examples</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>To get a list of changes between a commit and HEAD</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="groovy">List&lt;DiffEntry&gt; l = grgit.diff(oldCommit: 'b920cb5a16b8020568b77019e9abc77683037271')</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To get a list of changes for files with file path starting with foo/bar between a commit and HEAD</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="groovy">List&lt;DiffEntry&gt; l = grgit.diff(oldCommit: 'b920cb5a16b8020568b77019e9abc77683037271', pathFilter: 'foo/bar')</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To get a list of changes between a tag and HEAD</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="groovy">List&lt;DiffEntry&gt; l = grgit.diff(oldCommit: 'Foo_release')</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To get a list of changes between two tags</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="groovy">List&lt;DiffEntry&gt; l = grgit.diff(oldCommit: 'Foo_1.0_release', newCommit: 'Foo_2.0_release')</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -82,22 +140,13 @@
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://git-scm.com/docs/git-status">git-status</a></p>
-</li>
-<li>
-<p><a href="grgit-add.html">grgit-add</a></p>
-</li>
-<li>
-<p><a href="grgit-remove.html">grgit-remove</a></p>
-</li>
-<li>
-<p><a href="grgit-commit.html">grgit-commit</a></p>
+<p><a href="https://git-scm.com/docs/git-diff">git-diff</a></p>
 </li>
 </ul>
 </div>
 </div>
 </div></section>
-            <section class="mdl-card__actions mdl-card--border"><a href="https://github.com/ajoberstar/grgit/edit/master/docs/content/grgit-status.adoc" class="mdl-button mdl-js-button mdl-button--colored">Edit Page</a></section>
+            <section class="mdl-card__actions mdl-card--border"><a href="https://github.com/ajoberstar/grgit/edit/master/docs/content/grgit-diff.adoc" class="mdl-button mdl-js-button mdl-button--colored">Edit Page</a></section>
           </article>
         </div>
       </main>

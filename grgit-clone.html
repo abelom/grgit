@@ -46,17 +46,20 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.clone(dir: &lt;path&gt;, uri: &lt;path or uri&gt;, remote: &lt;name&gt;, bare: &lt;boolean&gt;,
-  checkout: &lt;boolean&gt;, refToCheckout: &lt;name&gt;, credentials: &lt;credentials&gt;)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.clone(dir: &lt;path&gt;, uri: &lt;path or uri&gt;, remote: &lt;name&gt;, all: &lt;boolean&gt;,
+  bare: &lt;boolean&gt;, branches: &lt;full refs&gt;, checkout: &lt;boolean&gt;,
+  refToCheckout: &lt;name&gt;, credentials: &lt;credentials&gt;)</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.clone {
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.clone {
   dir = &lt;path&gt;
   uri = &lt;path or uri&gt;
   remote = &lt;name&gt;
+  all = &lt;boolean&gt;
   bare = &lt;boolean&gt;
+  branches = &lt;full refs&gt;
   checkout = &lt;boolean&gt;
   refToCheckout = &lt;name&gt;
   credentials = &lt;credentials&gt;
@@ -99,9 +102,17 @@
 <dd>
 <p>(<code>String</code>, default <code>origin</code>) Instead of using the remote name <code>origin</code> to keep track of the upstream repository, use <code>&lt;name&gt;</code>.</p>
 </dd>
+<dt class="hdlist1">all</dt>
+<dd>
+<p>(<code>boolean</code>, default <code>false</code>) Clone all branches.</p>
+</dd>
 <dt class="hdlist1">bare</dt>
 <dd>
 <p>(<code>boolean</code>, default <code>false</code>) Create a bare repository.</p>
+</dd>
+<dt class="hdlist1">branches</dt>
+<dd>
+<p>(<code>List&lt;String&gt;</code>, <code>[]</code>) Select full refs to use with <code>all = false</code>.</p>
 </dd>
 <dt class="hdlist1">checkout</dt>
 <dd>

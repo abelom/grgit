@@ -46,17 +46,17 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.describe()</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.describe()</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.describe(commit: &lt;commit&gt;, longDescr: &lt;boolean&gt;, tags: &lt;boolean&gt;, match: [&lt;string&gt;], always: &lt;boolean&gt;)</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.describe(commit: &lt;commit&gt;, longDescr: &lt;boolean&gt;, tags: &lt;boolean&gt;, match: [&lt;string&gt;], always: &lt;boolean&gt;)</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.describe {
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.describe {
   commit = &lt;commit&gt;
   longDescr = &lt;boolean&gt;
   tags = &lt;boolean&gt;
@@ -115,7 +115,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.describe() == '1.0.0'</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.describe() == '1.0.0'</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -123,7 +123,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.describe(commit: 'other-branch') == '2.0.0-rc.1-7-g91fda36'</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.describe(commit: 'other-branch') == '2.0.0-rc.1-7-g91fda36'</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -131,7 +131,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.describe(longDescr: true) == '2.0.0-rc.1-7-g91fda36'</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.describe(longDescr: true) == '2.0.0-rc.1-7-g91fda36'</code></pre>
 </div>
 </div>
 </div>

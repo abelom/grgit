@@ -46,18 +46,18 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.log()</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.log()</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.log(includes: [&lt;revstr&gt;, ...], excludes: [&lt;revstr&gt;, ...], paths: [&lt;path&gt;, ...],
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.log(includes: [&lt;revstr&gt;, ...], excludes: [&lt;revstr&gt;, ...], paths: [&lt;path&gt;, ...],
   skipCommits: &lt;int&gt;, maxCommits: &lt;int&gt;)</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.log {
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.log {
   includes = [&lt;revstr&gt;, ...]
   excludes = [&lt;revstr&gt;, ...]
   paths = [&lt;path&gt;, ...]
@@ -86,7 +86,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.log(includes: ['foo', 'bar'], excludes: ['baz'])</code></pre>
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.log(includes: ['foo', 'bar'], excludes: ['baz'])</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -94,7 +94,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">grgit.log(includes: ['HEAD'], excludes: ['origin/master'])
+<pre class="prettyprint highlight"><code data-lang="groovy">grgit.log(includes: ['HEAD'], excludes: ['origin/master'])
 grgit.log {
   range('origin/master', 'HEAD')
 }</code></pre>

@@ -94,7 +94,7 @@
 <div class="listingblock">
 <div class="title">build.gradle</div>
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">repositories {
+<pre class="prettyprint highlight"><code data-lang="groovy">repositories {
   jcenter()
 }
 
@@ -106,7 +106,7 @@ dependencies {
 <div class="listingblock">
 <div class="title">pom.xml</div>
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;!-- make sure you've specified JCenter in your repositories --&gt;
+<pre class="prettyprint highlight"><code data-lang="xml">&lt;!-- make sure you've specified JCenter in your repositories --&gt;
 &lt;dependencies&gt;
   &lt;dependency&gt;
     &lt;groupId&gt;org.ajoberstar.grgit&lt;/groupId&gt;
@@ -132,7 +132,7 @@ dependencies {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">// no arg variant, only applies to operations that don't require input
+<pre class="prettyprint highlight"><code data-lang="groovy">// no arg variant, only applies to operations that don't require input
 grgit.log()
 
 // map argument variant
@@ -166,7 +166,7 @@ GRGIT_PASS=myauthtoken</code></pre>
 <div class="listingblock">
 <div class="title">grgitSample.groovy</div>
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">// get a grgit instance
+<pre class="prettyprint highlight"><code data-lang="groovy">// get a grgit instance
 def grgit = Grgit.clone(dir: 'test-repo', uri: 'https://github.com/ajoberstar/test-repo.git')
 
 // make some changes
